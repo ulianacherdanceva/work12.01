@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+     <h2>Регестрация</h2>
+     <textarea id="regpass"></textarea>
+     <button id="registration"></button>
+     </div>
+      <div>
+        <h2>Авторизация</h2>
+        <textarea id="username"></textarea>
+        <button id="username"></button>
+        <textarea id="password"></textarea>
+        <button id ="password"></button>
+      </div>
+      <script type="text/javascript">
+        let signUp = document.getElementById('registration')
+
+        let usernames = []
+        let userpasswords = []
+        
+        function Aregistr(){
+          let username = document.getElementById("username")
+          let userpasswords = document.getElementById("userpassword").value
+          let truefalse = 1
+          let passwordtrue = 0
+
+          for(let i = 0; i <= username.lenght; i++){
+            if(username.value === usernames [i]){
+              truefalse = 0
+            }
+          }
+
+          if(userpassword.lenght >= 4 && userpassword.lenght <= 12){
+          passwordtrue = 1
+          }
+
+          if(truefalse == 1 && passwordtrue == 1){
+            username.push(username.value)
+            userpassword.push(userpassword)
+          }
+          else{
+               alert("Ошибка регестрации")
+          }
+          console.log(usernames,userpasswords)
+        }
+
+        function login(){
+          let username = document.getElementById("username")
+          let userpassword = document.getElementById("password").value
+
+          let truefalse = 0
+
+          for(let i = 0; i<= usernames.length && i <= userpasswords.length; i++){
+            if(username.value === usernames[i] && userpassword === userpasswords[i]){
+              truefalse = 1
+            }
+          }
+          if(truefalse === 1)
+                 alert("well")
+          else
+                 alert("error")
+        }
+
+
+      </script>
+</body>
+</html>
